@@ -1,12 +1,29 @@
-# Welcome to your CDK Go project!
+### Kodeec Backend API
+A serverless API using Golang, AWS CDK, Lambda, API Gateway and DynamoDB.
 
-This is a blank project for Go development with CDK.
+#### Useful links:
+- [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation/home)
+- [AWS Lambda Console](https://console.aws.amazon.com/lambda/home#/functions)
+- [AWS ApiGateway Console](https://console.aws.amazon.com/apigateway/home)
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+#### Instructions:
 
-## Useful commands
+```shell
+# Synthesize a template from your app
+cdk synth
 
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
- * `go test`         run unit tests
+# Bootstrapping an environment
+cdk bootstrap
+
+# Compare deployed stack with current state
+cdk diff
+
+# Deployment to your AWS account/region
+cdk deploy --all
+
+# Local development
+cdk synth && sam local start-api -t ./cdk.out/KodeecApi.template.json
+
+# Destroy all services and stacks
+cdk destroy --all
+```
