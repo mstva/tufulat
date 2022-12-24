@@ -1,12 +1,16 @@
-package kodeec_api
+package main
 
 import (
 	"github.com/aws/aws-cdk-go/awscdk/v2"
+	"github.com/aws/aws-cdk-go/awscdk/v2/awsapigateway"
 	"github.com/aws/constructs-go/constructs/v10"
 	"github.com/aws/jsii-runtime-go"
+	"tufulat/routes"
+	"tufulat/stacks"
+	"tufulat/utils"
 )
 
-func NewKodeecApiStack(
+func NewTufulatStack(
 	scope constructs.Construct,
 	id string,
 	props *awscdk.StackProps,
@@ -22,7 +26,7 @@ func main() {
 
 	app := awscdk.NewApp(nil)
 
-	NewKodeecApiStack(app, "KodeecApiStack", nil)
+	NewTufulatStack(app, "TufulatStack", nil)
 
 	app.Synth(nil)
 }

@@ -1,4 +1,4 @@
-### Kodeec Backend API
+### Tufulat Backend API
 A serverless API using Golang, AWS CDK, Lambda, API Gateway and DynamoDB.
 
 #### Useful links:
@@ -22,7 +22,7 @@ cdk diff
 cdk deploy --all
 
 # Local development
-cdk synth && sam local start-api -t ./cdk.out/KodeecApi.template.json
+cdk synth && sam local start-api -t ./cdk.out/Tufulat.template.json
 
 # Destroy all services and stacks
 cdk destroy --all
