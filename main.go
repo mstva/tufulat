@@ -18,6 +18,11 @@ func NewTufulatStack(
 
 	stack := awscdk.NewStack(scope, &id, props)
 
+	api := awsapigateway.NewRestApi(stack, jsii.String(utils.AppName), nil)
+
+	apartmentStack := stacks.ApartmentStack{Scope: stack}
+	routes.ApartmentRoutes(api, apartmentStack)
+
 	return stack
 }
 
